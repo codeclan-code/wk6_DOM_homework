@@ -1,55 +1,34 @@
 document.addEventListener('DOMContentLoaded', () => {
-  console.log('JavaScript loaded');
+  // console.log('JavaScript loaded');
+  const albumTextInput = document.querySelector('#albumName')
+  const genreRadioInput = document.querySelector('#albumGenre')
+  const decadeSelectInput = document.querySelector('#albumDecade')
+  const commentTextAreaInput = document.querySelector('#albumComments')
+  const resultItem = document.querySelector('#album-results');
 
-  //title input
-  const handleInput = function(event){
-    const inputtedText = event.target.value
-    // console.log(inputtedText);
-    const resultParagraph = document.querySelector('#album-results');
-    // resultParagraph.textContent = inputtedText;
+  const deleteAddedItems = function(event){
+    resultItem.innerHTML = " "
   }
-
-  const titleTextInput = document.querySelector('#albumName')
-  // titleTextInput.addEventListener('input', handleInput)
-
-  const albumGenre = document.querySelector('#albumGenre')
-
-
-  const authorTextInput = document.querySelector('#albumComments')
-  // authorTextInput.addEventListener('input', handleInput)
-
-  //Select list
-
-  const changeSelectValue = function(event){
-    const selectedValue = event.target.value
-    // console.log(selectedValue);
-    const resultParagraph = document.querySelector('#album-results');
-    // resultParagraph.textContent = selectedValue;
-  }
-  const selectInput = document.querySelector('#albumDecade')
-  // selectInput.addEventListener('change',changeSelectValue)
-
-  //Submit button
+  //Submit
 
   const handleFormSubmit = function(event){
     event.preventDefault();
-
     const newReadingListItem = document.createElement('li')
-    const body = document.querySelector('ul')
-    body.appendChild(newReadingListItem)
-    // newReadingListItem.classList.add('red')
-    // newReadingListItem.textContent = `
-    // ${event.target.title.value} -
-    // ${event.target.author.value} -
-    // ${event.target.category.value}`
-    newReadingListItem.textContent = `${event.target.albumName.value}
-    - ${event.target.albumDecade.value}
-    - ${event.target.albumComments.value}
-    - ${event.target.albumGenre.value}`
+    const unOrderedList = document.querySelector('ul')
+    unOrderedList.appendChild(newReadingListItem)
+    newReadingListItem.classList.add('red')
+    newReadingListItem.textContent = `
+    ${event.target.albumName.value} -
+    ${event.target.albumGenre.value} -
+    ${event.target.albumDecade.value} -
+    ${event.target.albumComments.value}`;
+    document.getElementById("new-item-form").reset();
   }
 
   const form = document.querySelector('#new-item-form')
   form.addEventListener('submit', handleFormSubmit)
 
+  const deleteResults = document.querySelector('#delete-all')
+  deleteResults.addEventListener('click', deleteAddedItems)
 
 })

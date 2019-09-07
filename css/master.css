@@ -2,11 +2,26 @@ body {
   font-family: sans-serif;
 }
 
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 50%;
+  padding-left:20px;
+  padding-bottom:20px;
+}
+
 h2 {
   color: green;
   padding:0px;
   margin-bottom:5px;
   margin-top: 10px;
+}
+
+ul {
+
+  list-style: none;
 }
 
 
@@ -50,6 +65,6 @@ h2 {
   display: inline;
 }
 
-.mainContent {
-  margin-left:50px;
+.red {
+  color:red;
 }

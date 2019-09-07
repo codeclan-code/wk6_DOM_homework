@@ -7,24 +7,25 @@
   <link rel="stylesheet" href="css/master.css">
 </head>
 <body>
-  <div class="mainContent">
+  <div class="row">
+  <div class="column" style="background-color:#dadada;">
     <h1>The Albums of Robert Zimmerman</h1>
     <img src="dylan.jpg" alt="Robert Zimmerman at a young age"/>
-    <form class="formWrapper" id="new-item-form">
+    <form class="formWrapper" id="new-item-form" name="new-item-form">
       <div class="albumName">
         <label for="album-name">Album Name</label>
         <input type="text" name="album-name" id = "albumName" value="">
       </div>
       <div class="genre">
         <h2>Genre</h2>
-        <label for="albumGenre">Folk</label>
+        <label for="genre">Folk</label>
         <input type="radio" id="albumGenre" name="genre" value="Folk">
         <label for="genre">Rock</label>
         <input type="radio" id="albumGenre"  name="genre" value="Rock">
         <label for="genre">Country</label>
         <input type="radio"  id="albumGenre" name="genre" value="Country">
         <label for="genre">Other</label>
-        <input type="radio" id="albumGenre"  name="genre" value=Other">
+        <input type="radio" id="albumGenre"  name="genre" value="Other">
       </div>
       <div class="albumDecade">
         <h2>Released</h2>
@@ -44,18 +45,18 @@
       </div>
       <div class="btnBar">
         <span class="save">
-        <input type="submit" value="SAVE" id="save"/>
-        </span>
-        <span class="delete">
-          <button type="button" id = "DeleteALL">Delete All</button>
+          <input type="submit" value="SAVE" id="save"/>
         </span>
       </div>
     </form>
+    <span class="delete">
+      <button id="delete-all">Delete All</button>
+    </span>
   </div>
-  <div id="album-results">
-    <ul>
-      <li>Album Name, Genre, Decade, Comments </li>
+  <div class="column" style="background-color:#dadada; border-left:1px solid red">
+    <ul id="album-results">
     </ul>
   </div>
+</div>
 </body>
 </html>
