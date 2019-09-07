@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>The Albums of Robert Zimmerman</title>
+  <script src="js/app.js"></script>
+  <link rel="stylesheet" href="css/master.css">
+</head>
+<body>
+  <div class="mainContent">
+    <h1>The Albums of Robert Zimmerman</h1>
+    <img src="dylan.jpg" alt="Robert Zimmerman at a young age"/>
+    <form class="formWrapper" id="new-item-form">
+      <div class="albumName">
+        <label for="album-name">Album Name</label>
+        <input type="text" name="album-name" id = "albumName" value="">
+      </div>
+      <div class="genre">
+        <h2>Genre</h2>
+        <label for="albumGenre">Folk</label>
+        <input type="radio" id="albumGenre" name="genre" value="Folk">
+        <label for="genre">Rock</label>
+        <input type="radio" id="albumGenre"  name="genre" value="Rock">
+        <label for="genre">Country</label>
+        <input type="radio"  id="albumGenre" name="genre" value="Country">
+        <label for="genre">Other</label>
+        <input type="radio" id="albumGenre"  name="genre" value=Other">
+      </div>
+      <div class="albumDecade">
+        <h2>Released</h2>
+        <label for="album-decade" id="albumDecade">Decade</label>
+        <select class="" name="album-decade" id="albumDecade">
+          <option value="1960s">1960s</option>
+          <option value="1970s">1970s</option>
+          <option value="1980s">1980s</option>
+          <option value="1990s">1990s</option>
+          <option value="2000s">2000s</option>
+          <option value="2010s">2010s</option>
+        </select>
+      </div>
+      <div class="albumComments">
+        <h2>Comments</h2>
+        <textarea name="name" id="albumComments" rows="4" cols="40"></textarea>
+      </div>
+      <div class="btnBar">
+        <span class="save">
+        <input type="submit" value="SAVE" id="save"/>
+        </span>
+        <span class="delete">
+          <button type="button" id = "DeleteALL">Delete All</button>
+        </span>
+      </div>
+    </form>
+  </div>
+  <div id="album-results">
+    <ul>
+      <li>Album Name, Genre, Decade, Comments </li>
+    </ul>
+  </div>
+</body>
+</html>
