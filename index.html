@@ -8,72 +8,75 @@
 </head>
 <body>
   <div class="row">
-  <div class="column" style="background-color:#efefef;">
-    <h1>The Albums of Robert Zimmerman</h1>
-    <img src="dylan.jpg" alt="Robert Zimmerman at a young age"/>
-    <form class="formWrapper" id="new-item-form" name="new-item-form">
-      <div class="albumName">
-        <label for="album-name">Album Name</label>
-        <input type="text" name="album-name" id = "albumName" value="">
-      </div>
-      <div class="genre">
-        <h2>Genre</h2>
-        <label for="genre">Folk</label>
-        <input type="radio" id="albumGenre" name="genre" value="Folk">
-        <label for="genre">Rock</label>
-        <input type="radio" id="albumGenre"  name="genre" value="Rock">
-        <label for="genre">Country</label>
-        <input type="radio"  id="albumGenre" name="genre" value="Country">
-        <label for="genre">Other</label>
-        <input type="radio" id="albumGenre"  name="genre" value="Other">
-      </div>
-      <div class="albumDecade">
-        <h2>Released</h2>
-        <select class="" name="album-decade" id="albumDecade">
-          <option value="1960s">1960s</option>
-          <option value="1970s">1970s</option>
-          <option value="1980s">1980s</option>
-          <option value="1990s">1990s</option>
-          <option value="2000s">2000s</option>
-          <option value="2010s">2010s</option>
-        </select>
-      </div>
+    <div class="column" style="background-color:#efefef;">
+      <h1>The Albums of Robert Zimmerman</h1>
+      <img src="img/dylan.jpg" alt="Robert Zimmerman at a young age"/>
+      <form class="formWrapper" id="new-item-form" name="new-item-form">
+        <div class="albumName">
+          <label for="album-name">Album Name</label>
+          <input type="text" name="album-name" id = "albumName" value="" required>
+        </div>
+        <div class="genre">
+          <h2>Genre</h2>
+          <label for="genre">Folk</label>
+          <input type="radio" id="albumGenre" name="genre" value="Folk">
+          <label for="genre">Rock</label>
+          <input type="radio" id="albumGenre"  name="genre" value="Rock">
+          <label for="genre">Country</label>
+          <input type="radio"  id="albumGenre" name="genre" value="Country">
+          <label for="genre">Other</label>
+          <input type="radio" id="albumGenre"  name="genre" value="Other">
+        </div>
+        <div class="albumDecade">
+          <h2>Released</h2>
+          <select class="" name="album-decade" id="albumDecade">
+            <option value="1960s">1960s</option>
+            <option value="1970s">1970s</option>
+            <option value="1980s">1980s</option>
+            <option value="1990s">1990s</option>
+            <option value="2000s">2000s</option>
+            <option value="2010s">2010s</option>
+          </select>
+        </div>
 
-      <!-- Album Cover -->
-      <div class="albumCover">
-        <h2>Album Cover</h2>
-        <select class="" name="album-cover" id="albumCover">
-          <option value="basement.jpg">Basement Tapes</option>
-          <option value="blonde.jpg">Blonde on Blonde</option>
-          <option value="bott.jpg">Blood on the Tracks</option>
-          <option value="budokan.jpg">Budokan Live</option>
-          <option value="desire.jpg">Desire</option>
-          <option value="freewheelin.jpg">Freewheelin'</option>
-          <option value="infidels.jpg">Infidels</option>
-          <option value="nashville.jpg">Nashville Skyline</option>
-          <option value="newmorning.jpg">New Morning</option>
-          <option value="timeschangin.jpg">Times they are a-changin'</option>
-          <option value="other.jpg">Other</option>
-        </select>
-      </div>
-      <button id="stenk">Show Comments</button>
-      <div id="albumComment">
-        <h2>Comments</h2>
-        <textarea name="name" id="albumComments" rows="4" cols="40">No Comments</textarea>
-      </div>
-        <span class="save">
+        <!-- Album Cover -->
+        <div class="albumCover">
+          <h2>Album Cover</h2>
+          <select class="" name="album-cover" id="albumCover">
+            <option value="basement.jpg">Basement Tapes</option>
+            <option value="blonde.jpg">Blonde on Blonde</option>
+            <option value="bott.jpg">Blood on the Tracks</option>
+            <option value="budokan.jpg">Budokan Live</option>
+            <option value="desire.jpg">Desire</option>
+            <option value="freewheelin.jpg">Freewheelin'</option>
+            <option value="highway61.jpg">Highway 61 Revisited</option>
+            <option value="infidels.jpg">Infidels</option>
+            <option value="nashville.jpg">Nashville Skyline</option>
+            <option value="newmorning.jpg">New Morning</option>
+            <option value="timeschangin.jpg">Times they are a-changin'</option>
+            <option value="other.jpg">Other</option>
+          </select>
+        </div>
+        <div class="comment">
+          <button id="commentButton">Add Comments</button>
+        </div>
+        <div id="albumComment">
+          <h2>Comments</h2>
+          <textarea name="name" id="albumComments" rows="4" cols="40">No Comment</textarea>
+        </div>
+        <div class="save">
           <input type="submit" value="SAVE" id="save"/>
-        </span>
-    </form>
-    <span class="delete">
-      <button id="delete-all">Delete All</button>
-    </span>
-  </div>
-  <div class="column" style="background-color:#efefef; border-left:2px solid red">
-    <ul id="album-results">
+        </div>
+      </form>
+      <span class="delete">
+        <button id="delete-all">Delete All</button>
+      </span>
+    </div>
+    <div class="column" style="background-color:#efefef; border-left:2px solid red">
+      <ul id="album-results">
 
-    </ul>
+      </ul>
+    </div>
   </div>
-</div>
 </body>
 </html>

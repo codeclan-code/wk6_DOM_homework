@@ -13,7 +13,8 @@ body {
 }
 
 h2 {
-  color: green;
+  font-size: 120%;
+  color: navy;
   padding:0px;
   margin-bottom:5px;
   margin-top: 10px;
@@ -32,6 +33,24 @@ li img {
 
 }
 
+textarea {
+  font-size: 100%;
+  width:250px;
+  padding:5px;
+  border: 2px solid red;
+  border-radius: 4px;
+}
+
+select {
+  font-size: 100%;
+  width:250px;
+  height:20px;
+  padding: 10px 10px;
+  border: none;
+  border-radius: 4px;
+  border: 1px solid gray;
+  background-color: #dadada;
+}
 
 .albumName label, .albumDecade label {
   color: red;
@@ -39,10 +58,15 @@ li img {
 }
 
 .albumName input {
+  font-size: 100%;
   width:250px;
+  padding:5px;
+  border: 2px solid red;
+  border-radius: 4px;
 }
 
 #albumComment {
+  font-size: 100%;
   display:none;
 }
 
@@ -59,6 +83,16 @@ li img {
 .delete button {
   color: white;
   background-color: orange;
+  padding: 10px;
+  font-size: 100%;
+  border-radius: 10px;
+  margin-top:10px;
+  width:100px;
+}
+
+#commentButton {
+  color: white;
+  background-color: #dadada;
   padding: 10px;
   font-size: 100%;
   border-radius: 10px;

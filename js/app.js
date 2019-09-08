@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-  document.title = "Bob and his Albums"
+  document.title = "Bob and his Albums - A JavaSript Project"
   const albumTextInput = document.querySelector('#albumName')
   const genreRadioInput = document.querySelector('#albumGenre')
   const decadeSelectInput = document.querySelector('#albumDecade')
@@ -9,19 +9,19 @@ document.addEventListener('DOMContentLoaded', () => {
   const resultItem = document.querySelector('#album-results');
 
   const deleteAddedItems = function(event){
-    resultItem.innerHTML = " "
+    resultItem.innerHTML = ""
   }
 
   function showHideContent() {
     event.preventDefault();
-    const btitle = document.querySelector("#stenk");
-    const x = document.getElementById('albumComment');
-    if (x.style.display === 'none') {
-      x.style.display = 'block';
-      btitle.textContent = 'Hide Comments'
+    const btnTitle = document.querySelector("#commentButton");
+    const comments = document.getElementById('albumComment');
+    if (comments.style.display === 'none') {
+      comments.style.display = 'block';
+      btnTitle.textContent = 'Hide Comments'
     } else {
-      x.style.display = 'none';
-      btitle.textContent = 'Show Comments'
+      comments.style.display = 'none';
+      btnTitle.textContent = 'Add Comments'
     }
   }
   //Submit
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const unOrderedList = document.querySelector('#album-results')
     const newImageItem = document.createElement('li')
     unOrderedList.appendChild(newImageItem)
-    newImageItem.innerHTML = "<img src=\"" + event.target.albumCover.value + "\">";
+    newImageItem.innerHTML = "<img src=\"img/" + event.target.albumCover.value + "\">";
     const newReadingListItem = document.createElement('li')
     unOrderedList.appendChild(newReadingListItem)
     newReadingListItem.classList.add('red')
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   // listeners
 
-  const showHideComments = document.querySelector("#stenk")
+  const showHideComments = document.querySelector("#commentButton")
   showHideComments.addEventListener('click', showHideContent)
 
   const form = document.querySelector("#new-item-form")
