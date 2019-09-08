@@ -42,6 +42,10 @@ li img {
   width:250px;
 }
 
+#albumComment {
+  display:none;
+}
+
 .save input {
   color: white;
   background-color: green;

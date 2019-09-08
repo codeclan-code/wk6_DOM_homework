@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+  document.title = "Bob and his Albums"
   const albumTextInput = document.querySelector('#albumName')
   const genreRadioInput = document.querySelector('#albumGenre')
   const decadeSelectInput = document.querySelector('#albumDecade')
@@ -9,6 +10,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const deleteAddedItems = function(event){
     resultItem.innerHTML = " "
+  }
+
+  function showHideContent() {
+    event.preventDefault();
+    const btitle = document.querySelector("#stenk");
+    const x = document.getElementById('albumComment');
+    if (x.style.display === 'none') {
+      x.style.display = 'block';
+      btitle.textContent = 'Hide Comments'
+    } else {
+      x.style.display = 'none';
+      btitle.textContent = 'Show Comments'
+    }
   }
   //Submit
   const handleFormSubmit = function(event){
@@ -28,10 +42,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.getElementById("new-item-form").reset();
   }
-// listeners
-  const form = document.querySelector('#new-item-form')
+  // listeners
+
+  const showHideComments = document.querySelector("#stenk")
+  showHideComments.addEventListener('click', showHideContent)
+
+  const form = document.querySelector("#new-item-form")
   form.addEventListener('submit', handleFormSubmit)
 
-  const deleteResults = document.querySelector('#delete-all')
+  const deleteResults = document.querySelector("#delete-all")
   deleteResults.addEventListener('click', deleteAddedItems)
+
 })
